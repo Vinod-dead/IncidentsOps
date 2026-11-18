@@ -1,0 +1,412 @@
+{
+ "id": 1,
+ "name": "bad_deploy on checkout-service",
+ "service": "checkout-service",
+ "alert": "checkout-service: HTTP 5xx rate above 5% for 10 minutes",
+ "root_cause": "bad_deploy",
+ "logs": [
+  {
+   "t": 26,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 56,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 46,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 59,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:17"
+  },
+  {
+   "t": 33,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 50,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:14"
+  },
+  {
+   "t": 36,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:37"
+  },
+  {
+   "t": 8,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 60,
+   "level": "INFO",
+   "msg": "request completed in 17ms"
+  },
+  {
+   "t": 43,
+   "level": "INFO",
+   "msg": "request completed in 36ms"
+  },
+  {
+   "t": 33,
+   "level": "INFO",
+   "msg": "request completed in 30ms"
+  },
+  {
+   "t": 34,
+   "level": "INFO",
+   "msg": "scheduler tick 56"
+  },
+  {
+   "t": 30,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 57,
+   "level": "INFO",
+   "msg": "request completed in 31ms"
+  },
+  {
+   "t": 33,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 56,
+   "level": "INFO",
+   "msg": "request completed in 89ms"
+  },
+  {
+   "t": 29,
+   "level": "INFO",
+   "msg": "request completed in 13ms"
+  },
+  {
+   "t": 46,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:30"
+  },
+  {
+   "t": 43,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.87.4"
+  },
+  {
+   "t": 9,
+   "level": "INFO",
+   "msg": "scheduler tick 24"
+  },
+  {
+   "t": 22,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 20,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 5,
+   "level": "INFO",
+   "msg": "scheduler tick 86"
+  },
+  {
+   "t": 17,
+   "level": "INFO",
+   "msg": "scheduler tick 20"
+  },
+  {
+   "t": 38,
+   "level": "WARN",
+   "msg": "retrying idempotent request (attempt 2)"
+  },
+  {
+   "t": 46,
+   "level": "WARN",
+   "msg": "deprecated API /v1/ping used by legacy-client"
+  },
+  {
+   "t": 15,
+   "level": "ERROR",
+   "msg": "NullPointerException at CartService.applyDiscount (build v2.14.1)"
+  },
+  {
+   "t": 1,
+   "level": "ERROR",
+   "msg": "500 POST /checkout - unhandled exception in discount handler"
+  },
+  {
+   "t": 6,
+   "level": "ERROR",
+   "msg": "NullPointerException at CartService.applyDiscount (build v2.14.1)"
+  },
+  {
+   "t": 14,
+   "level": "ERROR",
+   "msg": "500 POST /checkout - unhandled exception in discount handler"
+  },
+  {
+   "t": 5,
+   "level": "ERROR",
+   "msg": "NullPointerException at CartService.applyDiscount (build v2.14.1)"
+  },
+  {
+   "t": 16,
+   "level": "ERROR",
+   "msg": "500 POST /checkout - unhandled exception in discount handler"
+  }
+ ],
+ "decoy_logs": [
+  {
+   "t": 34,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 18,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 59,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 45,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 56,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 14,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 57,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 7,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 57,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  },
+  {
+   "t": 60,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  }
+ ],
+ "metrics": {
+  "error_rate": [
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.036,
+   0.062,
+   0.088,
+   0.114,
+   0.14
+  ],
+  "p99_latency_ms": [
+   220,
+   220,
+   220,
+   220,
+   220,
+   220,
+   220,
+   656.0,
+   1092.0,
+   1528.0,
+   1964.0,
+   2400.0
+  ],
+  "memory_rss_mb": [
+   784.6077,
+   812.0874,
+   804.3614,
+   797.0123,
+   788.1465,
+   811.606,
+   792.1215,
+   802.9715,
+   786.409,
+   801.8075,
+   796.5444,
+   793.8116
+  ],
+  "db_connections_used": [
+   39.4658,
+   39.2568,
+   40.5975,
+   40.1725,
+   39.2091,
+   40.127,
+   40.4264,
+   39.5209,
+   40.6869,
+   40.5476,
+   40.0619,
+   40.7813
+  ],
+  "db_connections_max": [
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cpu_steal_pct": [
+   0.9887,
+   0.9815,
+   0.9948,
+   0.9873,
+   1.0178,
+   0.9846,
+   0.9941,
+   1.0145,
+   0.9816,
+   0.9836,
+   1.0008,
+   0.9944
+  ],
+  "disk_used_pct": [
+   53.947,
+   55.3752,
+   55.7513,
+   54.0209,
+   54.1826,
+   54.1669,
+   54.9449,
+   55.3303,
+   54.4823,
+   55.7225,
+   54.1119,
+   55.8803
+  ],
+  "cert_days_remaining": [
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0
+  ],
+  "dns_error_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cache_hit_ratio": [
+   0.9395,
+   0.9354,
+   0.9387,
+   0.9522,
+   0.965,
+   0.9351,
+   0.9542,
+   0.9511,
+   0.9491,
+   0.9608,
+   0.9406,
+   0.9652
+  ],
+  "upstream_429_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "config_reload_failures": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "deploys": [
+  {
+   "version": "v2.14.1",
+   "minutes_ago": 18,
+   "author": "dev-a",
+   "change": "new discount engine"
+  },
+  {
+   "version": "v2.13.4",
+   "minutes_ago": 4320,
+   "author": "ci",
+   "change": "dependency bumps"
+  },
+  {
+   "version": "v2.13.3",
+   "minutes_ago": 9000,
+   "author": "ci",
+   "change": "minor fix"
+  }
+ ],
+ "tool_faults": {}
+}

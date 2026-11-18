@@ -1,0 +1,13 @@
+services:
+  incidentops:
+    build: .
+    environment:
+      - INCIDENTOPS_LLM=${INCIDENTOPS_LLM:-fake}
+      - ANTHROPIC_API_KEY
+      - OPENAI_API_KEY
+      - GEMINI_API_KEY
+    volumes:
+      - incident-data:/data
+    command: ["run", "--scenario", "7"]
+volumes:
+  incident-data:

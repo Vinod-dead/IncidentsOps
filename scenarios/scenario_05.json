@@ -1,0 +1,406 @@
+{
+ "id": 5,
+ "name": "noisy_neighbor on search-service",
+ "service": "search-service",
+ "alert": "search-service: latency degradation on a single node pool",
+ "root_cause": "noisy_neighbor",
+ "logs": [
+  {
+   "t": 8,
+   "level": "INFO",
+   "msg": "scheduler tick 37"
+  },
+  {
+   "t": 2,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 47,
+   "level": "INFO",
+   "msg": "request completed in 17ms"
+  },
+  {
+   "t": 44,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.88.4"
+  },
+  {
+   "t": 29,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 41,
+   "level": "INFO",
+   "msg": "scheduler tick 12"
+  },
+  {
+   "t": 23,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:65"
+  },
+  {
+   "t": 56,
+   "level": "INFO",
+   "msg": "scheduler tick 78"
+  },
+  {
+   "t": 12,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 47,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.44.4"
+  },
+  {
+   "t": 12,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 47,
+   "level": "INFO",
+   "msg": "request completed in 71ms"
+  },
+  {
+   "t": 12,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 21,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.15.4"
+  },
+  {
+   "t": 3,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 42,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 6,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.34.4"
+  },
+  {
+   "t": 30,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:38"
+  },
+  {
+   "t": 40,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.55.4"
+  },
+  {
+   "t": 15,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 35,
+   "level": "INFO",
+   "msg": "scheduler tick 57"
+  },
+  {
+   "t": 5,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 13,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:87"
+  },
+  {
+   "t": 19,
+   "level": "INFO",
+   "msg": "scheduler tick 87"
+  },
+  {
+   "t": 20,
+   "level": "WARN",
+   "msg": "retrying idempotent request (attempt 2)"
+  },
+  {
+   "t": 54,
+   "level": "WARN",
+   "msg": "deprecated API /v1/ping used by legacy-client"
+  },
+  {
+   "t": 1,
+   "level": "WARN",
+   "msg": "CPU steal time high on node ip-10-0-3-17 (noisy neighbor suspected)"
+  },
+  {
+   "t": 13,
+   "level": "WARN",
+   "msg": "request throttled: CPU steal 36% on shared host"
+  },
+  {
+   "t": 3,
+   "level": "WARN",
+   "msg": "CPU steal time high on node ip-10-0-3-17 (noisy neighbor suspected)"
+  },
+  {
+   "t": 13,
+   "level": "WARN",
+   "msg": "request throttled: CPU steal 36% on shared host"
+  },
+  {
+   "t": 2,
+   "level": "WARN",
+   "msg": "CPU steal time high on node ip-10-0-3-17 (noisy neighbor suspected)"
+  },
+  {
+   "t": 11,
+   "level": "WARN",
+   "msg": "request throttled: CPU steal 36% on shared host"
+  }
+ ],
+ "decoy_logs": [
+  {
+   "t": 48,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 31,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 23,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 30,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 50,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 41,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 43,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 40,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 21,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  },
+  {
+   "t": 44,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  }
+ ],
+ "metrics": {
+  "error_rate": [
+   0.01,
+   0.0102,
+   0.01,
+   0.0102,
+   0.01,
+   0.0102,
+   0.0099,
+   0.0101,
+   0.01,
+   0.01,
+   0.0099,
+   0.0101
+  ],
+  "p99_latency_ms": [
+   220,
+   220,
+   220,
+   362.2222,
+   504.4444,
+   646.6667,
+   788.8889,
+   931.1111,
+   1073.3333,
+   1215.5556,
+   1357.7778,
+   1500.0
+  ],
+  "memory_rss_mb": [
+   803.0176,
+   796.5844,
+   795.4004,
+   811.0186,
+   806.8409,
+   801.3328,
+   792.5048,
+   813.7718,
+   805.2705,
+   811.14,
+   792.7777,
+   803.1611
+  ],
+  "db_connections_used": [
+   39.9311,
+   39.7314,
+   40.5002,
+   40.1544,
+   40.7917,
+   40.5259,
+   39.2294,
+   40.1761,
+   39.6601,
+   40.4779,
+   40.5079,
+   39.5031
+  ],
+  "db_connections_max": [
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cpu_steal_pct": [
+   1,
+   1,
+   1,
+   5.1111,
+   9.2222,
+   13.3333,
+   17.4444,
+   21.5556,
+   25.6667,
+   29.7778,
+   33.8889,
+   38.0
+  ],
+  "disk_used_pct": [
+   54.3181,
+   54.6535,
+   54.3949,
+   54.5455,
+   54.7258,
+   54.9119,
+   54.9549,
+   56.0089,
+   53.9716,
+   54.8566,
+   54.4474,
+   55.955
+  ],
+  "cert_days_remaining": [
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0
+  ],
+  "dns_error_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cache_hit_ratio": [
+   0.9446,
+   0.9395,
+   0.964,
+   0.9388,
+   0.9538,
+   0.9568,
+   0.9666,
+   0.9458,
+   0.9549,
+   0.9449,
+   0.9328,
+   0.9633
+  ],
+  "upstream_429_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "config_reload_failures": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "deploys": [
+  {
+   "version": "v2.13.4",
+   "minutes_ago": 4320,
+   "author": "ci",
+   "change": "dependency bumps"
+  },
+  {
+   "version": "v2.13.3",
+   "minutes_ago": 9000,
+   "author": "ci",
+   "change": "minor fix"
+  }
+ ],
+ "tool_faults": {}
+}

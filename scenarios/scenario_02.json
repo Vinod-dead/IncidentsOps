@@ -1,0 +1,406 @@
+{
+ "id": 2,
+ "name": "db_pool_exhaustion on orders-service",
+ "service": "orders-service",
+ "alert": "orders-service: p99 latency above 3s for 10 minutes",
+ "root_cause": "db_pool_exhaustion",
+ "logs": [
+  {
+   "t": 6,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 37,
+   "level": "INFO",
+   "msg": "request completed in 29ms"
+  },
+  {
+   "t": 19,
+   "level": "INFO",
+   "msg": "scheduler tick 60"
+  },
+  {
+   "t": 46,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.38.4"
+  },
+  {
+   "t": 41,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.43.4"
+  },
+  {
+   "t": 43,
+   "level": "INFO",
+   "msg": "scheduler tick 36"
+  },
+  {
+   "t": 54,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:38"
+  },
+  {
+   "t": 26,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:7"
+  },
+  {
+   "t": 6,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.38.4"
+  },
+  {
+   "t": 55,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.86.4"
+  },
+  {
+   "t": 20,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 40,
+   "level": "INFO",
+   "msg": "scheduler tick 62"
+  },
+  {
+   "t": 22,
+   "level": "INFO",
+   "msg": "request completed in 89ms"
+  },
+  {
+   "t": 31,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 57,
+   "level": "INFO",
+   "msg": "request completed in 45ms"
+  },
+  {
+   "t": 15,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 52,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:82"
+  },
+  {
+   "t": 23,
+   "level": "INFO",
+   "msg": "request completed in 27ms"
+  },
+  {
+   "t": 17,
+   "level": "INFO",
+   "msg": "scheduler tick 39"
+  },
+  {
+   "t": 39,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:8"
+  },
+  {
+   "t": 8,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.60.4"
+  },
+  {
+   "t": 14,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.42.4"
+  },
+  {
+   "t": 3,
+   "level": "INFO",
+   "msg": "request completed in 72ms"
+  },
+  {
+   "t": 48,
+   "level": "INFO",
+   "msg": "request completed in 21ms"
+  },
+  {
+   "t": 35,
+   "level": "WARN",
+   "msg": "retrying idempotent request (attempt 2)"
+  },
+  {
+   "t": 40,
+   "level": "WARN",
+   "msg": "deprecated API /v1/ping used by legacy-client"
+  },
+  {
+   "t": 13,
+   "level": "ERROR",
+   "msg": "HikariPool-1 - Connection is not available, request timed out after 30000ms (connection pool exhausted)"
+  },
+  {
+   "t": 19,
+   "level": "WARN",
+   "msg": "db connection pool exhausted, 87 threads waiting"
+  },
+  {
+   "t": 9,
+   "level": "ERROR",
+   "msg": "HikariPool-1 - Connection is not available, request timed out after 30000ms (connection pool exhausted)"
+  },
+  {
+   "t": 14,
+   "level": "WARN",
+   "msg": "db connection pool exhausted, 87 threads waiting"
+  },
+  {
+   "t": 8,
+   "level": "ERROR",
+   "msg": "HikariPool-1 - Connection is not available, request timed out after 30000ms (connection pool exhausted)"
+  },
+  {
+   "t": 19,
+   "level": "WARN",
+   "msg": "db connection pool exhausted, 87 threads waiting"
+  }
+ ],
+ "decoy_logs": [
+  {
+   "t": 28,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 30,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 48,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 1,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 22,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 44,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 37,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 21,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 16,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  },
+  {
+   "t": 44,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  }
+ ],
+ "metrics": {
+  "error_rate": [
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.0214,
+   0.0329,
+   0.0443,
+   0.0557,
+   0.0671,
+   0.0786,
+   0.09
+  ],
+  "p99_latency_ms": [
+   220,
+   220,
+   220,
+   220,
+   630.0,
+   1040.0,
+   1450.0,
+   1860.0,
+   2270.0,
+   2680.0,
+   3090.0,
+   3500.0
+  ],
+  "memory_rss_mb": [
+   802.5167,
+   813.9387,
+   798.0851,
+   793.2596,
+   809.5162,
+   787.2404,
+   806.9993,
+   804.6386,
+   796.5206,
+   814.0575,
+   803.4956,
+   788.9551
+  ],
+  "db_connections_used": [
+   40,
+   40,
+   46.0,
+   52.0,
+   58.0,
+   64.0,
+   70.0,
+   76.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "db_connections_max": [
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cpu_steal_pct": [
+   0.9825,
+   0.9872,
+   1.01,
+   1.0128,
+   1.0179,
+   0.9837,
+   1.0131,
+   0.9804,
+   1.0117,
+   0.9892,
+   1.0167,
+   1.0053
+  ],
+  "disk_used_pct": [
+   54.939,
+   54.2452,
+   55.859,
+   54.7656,
+   55.9762,
+   53.9595,
+   54.8468,
+   53.9877,
+   54.5045,
+   56.0043,
+   54.6392,
+   54.0011
+  ],
+  "cert_days_remaining": [
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0
+  ],
+  "dns_error_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cache_hit_ratio": [
+   0.9453,
+   0.958,
+   0.9583,
+   0.9621,
+   0.9354,
+   0.9504,
+   0.9471,
+   0.9471,
+   0.9537,
+   0.9348,
+   0.9639,
+   0.9624
+  ],
+  "upstream_429_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "config_reload_failures": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "deploys": [
+  {
+   "version": "v2.13.4",
+   "minutes_ago": 4320,
+   "author": "ci",
+   "change": "dependency bumps"
+  },
+  {
+   "version": "v2.13.3",
+   "minutes_ago": 9000,
+   "author": "ci",
+   "change": "minor fix"
+  }
+ ],
+ "tool_faults": {}
+}

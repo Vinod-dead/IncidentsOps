@@ -1,0 +1,406 @@
+{
+ "id": 6,
+ "name": "disk_full on ingest-service",
+ "service": "ingest-service",
+ "alert": "ingest-service: writes failing, error rate climbing",
+ "root_cause": "disk_full",
+ "logs": [
+  {
+   "t": 50,
+   "level": "INFO",
+   "msg": "request completed in 40ms"
+  },
+  {
+   "t": 34,
+   "level": "INFO",
+   "msg": "request completed in 11ms"
+  },
+  {
+   "t": 42,
+   "level": "INFO",
+   "msg": "scheduler tick 73"
+  },
+  {
+   "t": 46,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:27"
+  },
+  {
+   "t": 23,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 10,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 2,
+   "level": "INFO",
+   "msg": "scheduler tick 52"
+  },
+  {
+   "t": 12,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 49,
+   "level": "INFO",
+   "msg": "scheduler tick 8"
+  },
+  {
+   "t": 25,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 13,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 1,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:86"
+  },
+  {
+   "t": 42,
+   "level": "INFO",
+   "msg": "scheduler tick 6"
+  },
+  {
+   "t": 12,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.41.4"
+  },
+  {
+   "t": 29,
+   "level": "INFO",
+   "msg": "request completed in 65ms"
+  },
+  {
+   "t": 17,
+   "level": "INFO",
+   "msg": "scheduler tick 22"
+  },
+  {
+   "t": 21,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:66"
+  },
+  {
+   "t": 57,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.11.4"
+  },
+  {
+   "t": 6,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.68.4"
+  },
+  {
+   "t": 19,
+   "level": "INFO",
+   "msg": "request completed in 29ms"
+  },
+  {
+   "t": 29,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:26"
+  },
+  {
+   "t": 41,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:10"
+  },
+  {
+   "t": 22,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 24,
+   "level": "INFO",
+   "msg": "request completed in 37ms"
+  },
+  {
+   "t": 39,
+   "level": "WARN",
+   "msg": "retrying idempotent request (attempt 2)"
+  },
+  {
+   "t": 33,
+   "level": "WARN",
+   "msg": "deprecated API /v1/ping used by legacy-client"
+  },
+  {
+   "t": 18,
+   "level": "ERROR",
+   "msg": "write /var/lib/data/wal: No space left on device"
+  },
+  {
+   "t": 3,
+   "level": "ERROR",
+   "msg": "failed to append segment: No space left on device"
+  },
+  {
+   "t": 7,
+   "level": "ERROR",
+   "msg": "write /var/lib/data/wal: No space left on device"
+  },
+  {
+   "t": 11,
+   "level": "ERROR",
+   "msg": "failed to append segment: No space left on device"
+  },
+  {
+   "t": 7,
+   "level": "ERROR",
+   "msg": "write /var/lib/data/wal: No space left on device"
+  },
+  {
+   "t": 10,
+   "level": "ERROR",
+   "msg": "failed to append segment: No space left on device"
+  }
+ ],
+ "decoy_logs": [
+  {
+   "t": 30,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 29,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 13,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 25,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 30,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 35,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 60,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 44,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 34,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  },
+  {
+   "t": 35,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  }
+ ],
+ "metrics": {
+  "error_rate": [
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.0575,
+   0.105,
+   0.1525,
+   0.2
+  ],
+  "p99_latency_ms": [
+   223.2781,
+   218.306,
+   218.0012,
+   224.2578,
+   222.0989,
+   222.3679,
+   222.066,
+   215.953,
+   222.4928,
+   224.3024,
+   224.2839,
+   216.4058
+  ],
+  "memory_rss_mb": [
+   803.7434,
+   812.8857,
+   809.5533,
+   796.0841,
+   795.3547,
+   796.9104,
+   800.7968,
+   797.1424,
+   804.4696,
+   804.6357,
+   806.9985,
+   798.7417
+  ],
+  "db_connections_used": [
+   40.7156,
+   40.077,
+   40.034,
+   40.796,
+   40.5356,
+   40.1473,
+   40.045,
+   40.7915,
+   39.8092,
+   39.4644,
+   39.7764,
+   39.3294
+  ],
+  "db_connections_max": [
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cpu_steal_pct": [
+   1.0136,
+   1.0185,
+   0.9834,
+   0.9825,
+   0.9993,
+   1.0101,
+   1.0026,
+   0.9857,
+   1.0161,
+   0.9957,
+   0.9818,
+   0.9983
+  ],
+  "disk_used_pct": [
+   59.75,
+   64.5,
+   69.25,
+   74.0,
+   78.75,
+   83.5,
+   88.25,
+   93.0,
+   97.75,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cert_days_remaining": [
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0
+  ],
+  "dns_error_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cache_hit_ratio": [
+   0.9497,
+   0.9557,
+   0.9447,
+   0.9314,
+   0.9414,
+   0.9514,
+   0.9549,
+   0.9359,
+   0.9409,
+   0.9342,
+   0.9592,
+   0.9379
+  ],
+  "upstream_429_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "config_reload_failures": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "deploys": [
+  {
+   "version": "v2.13.4",
+   "minutes_ago": 4320,
+   "author": "ci",
+   "change": "dependency bumps"
+  },
+  {
+   "version": "v2.13.3",
+   "minutes_ago": 9000,
+   "author": "ci",
+   "change": "minor fix"
+  }
+ ],
+ "tool_faults": {}
+}

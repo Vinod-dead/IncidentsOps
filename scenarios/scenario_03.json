@@ -1,0 +1,406 @@
+{
+ "id": 3,
+ "name": "memory_leak on cart-service",
+ "service": "cart-service",
+ "alert": "cart-service: pod restarts and rising latency",
+ "root_cause": "memory_leak",
+ "logs": [
+  {
+   "t": 31,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 20,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 26,
+   "level": "INFO",
+   "msg": "request completed in 16ms"
+  },
+  {
+   "t": 22,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 14,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:54"
+  },
+  {
+   "t": 20,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.55.4"
+  },
+  {
+   "t": 12,
+   "level": "INFO",
+   "msg": "request completed in 71ms"
+  },
+  {
+   "t": 25,
+   "level": "INFO",
+   "msg": "scheduler tick 17"
+  },
+  {
+   "t": 21,
+   "level": "INFO",
+   "msg": "request completed in 82ms"
+  },
+  {
+   "t": 22,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 16,
+   "level": "INFO",
+   "msg": "request completed in 9ms"
+  },
+  {
+   "t": 15,
+   "level": "INFO",
+   "msg": "scheduler tick 48"
+  },
+  {
+   "t": 41,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.25.4"
+  },
+  {
+   "t": 53,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.28.4"
+  },
+  {
+   "t": 16,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 5,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:35"
+  },
+  {
+   "t": 49,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 14,
+   "level": "INFO",
+   "msg": "scheduler tick 8"
+  },
+  {
+   "t": 5,
+   "level": "INFO",
+   "msg": "request completed in 72ms"
+  },
+  {
+   "t": 4,
+   "level": "INFO",
+   "msg": "scheduler tick 45"
+  },
+  {
+   "t": 25,
+   "level": "INFO",
+   "msg": "request completed in 22ms"
+  },
+  {
+   "t": 35,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:34"
+  },
+  {
+   "t": 26,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:47"
+  },
+  {
+   "t": 21,
+   "level": "INFO",
+   "msg": "scheduler tick 87"
+  },
+  {
+   "t": 31,
+   "level": "WARN",
+   "msg": "retrying idempotent request (attempt 2)"
+  },
+  {
+   "t": 28,
+   "level": "WARN",
+   "msg": "deprecated API /v1/ping used by legacy-client"
+  },
+  {
+   "t": 14,
+   "level": "WARN",
+   "msg": "GC overhead high: heap 94% used"
+  },
+  {
+   "t": 20,
+   "level": "ERROR",
+   "msg": "java.lang.OutOfMemoryError: Java heap space"
+  },
+  {
+   "t": 18,
+   "level": "ERROR",
+   "msg": "container terminated reason=OOMKilled restartCount=7"
+  },
+  {
+   "t": 2,
+   "level": "WARN",
+   "msg": "GC overhead high: heap 94% used"
+  },
+  {
+   "t": 6,
+   "level": "ERROR",
+   "msg": "java.lang.OutOfMemoryError: Java heap space"
+  },
+  {
+   "t": 2,
+   "level": "ERROR",
+   "msg": "container terminated reason=OOMKilled restartCount=7"
+  }
+ ],
+ "decoy_logs": [
+  {
+   "t": 41,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 26,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 40,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 51,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 45,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 30,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 44,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 2,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 16,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  },
+  {
+   "t": 20,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  }
+ ],
+ "metrics": {
+  "error_rate": [
+   0.02,
+   0.0196,
+   0.0199,
+   0.02,
+   0.0196,
+   0.0203,
+   0.0202,
+   0.0203,
+   0.02,
+   0.0197,
+   0.0199,
+   0.0197
+  ],
+  "p99_latency_ms": [
+   220,
+   220,
+   220,
+   220,
+   220,
+   220,
+   333.3333,
+   446.6667,
+   560.0,
+   673.3333,
+   786.6667,
+   900.0
+  ],
+  "memory_rss_mb": [
+   1058.3333,
+   1316.6667,
+   1575.0,
+   1833.3333,
+   2091.6667,
+   2350.0,
+   2608.3333,
+   2866.6667,
+   3125.0,
+   3383.3333,
+   3641.6667,
+   3900.0
+  ],
+  "db_connections_used": [
+   40.4072,
+   39.4127,
+   39.4177,
+   40.3875,
+   40.5937,
+   39.4899,
+   40.5731,
+   39.5244,
+   39.7456,
+   40.2196,
+   39.4385,
+   40.0175
+  ],
+  "db_connections_max": [
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cpu_steal_pct": [
+   0.9974,
+   0.9839,
+   0.9824,
+   0.9972,
+   1.0001,
+   1.0003,
+   0.9826,
+   0.9973,
+   1.0191,
+   1.0083,
+   0.9929,
+   1.0078
+  ],
+  "disk_used_pct": [
+   54.7711,
+   55.1544,
+   54.1802,
+   53.9049,
+   55.4581,
+   54.9143,
+   54.0072,
+   56.0992,
+   55.2802,
+   54.4167,
+   55.0091,
+   55.6687
+  ],
+  "cert_days_remaining": [
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0
+  ],
+  "dns_error_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cache_hit_ratio": [
+   0.9492,
+   0.9579,
+   0.9313,
+   0.9614,
+   0.9527,
+   0.9445,
+   0.9466,
+   0.9642,
+   0.9668,
+   0.9425,
+   0.9625,
+   0.9436
+  ],
+  "upstream_429_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "config_reload_failures": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "deploys": [
+  {
+   "version": "v2.13.4",
+   "minutes_ago": 4320,
+   "author": "ci",
+   "change": "dependency bumps"
+  },
+  {
+   "version": "v2.13.3",
+   "minutes_ago": 9000,
+   "author": "ci",
+   "change": "minor fix"
+  }
+ ],
+ "tool_faults": {}
+}

@@ -1,0 +1,406 @@
+{
+ "id": 7,
+ "name": "dns_failure on inventory-service",
+ "service": "inventory-service",
+ "alert": "inventory-service: upstream lookups failing intermittently",
+ "root_cause": "dns_failure",
+ "logs": [
+  {
+   "t": 31,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 9,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.28.4"
+  },
+  {
+   "t": 50,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 50,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.34.4"
+  },
+  {
+   "t": 45,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 31,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.61.4"
+  },
+  {
+   "t": 4,
+   "level": "INFO",
+   "msg": "scheduler tick 38"
+  },
+  {
+   "t": 19,
+   "level": "INFO",
+   "msg": "scheduler tick 55"
+  },
+  {
+   "t": 47,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.59.4"
+  },
+  {
+   "t": 49,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:28"
+  },
+  {
+   "t": 9,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.82.4"
+  },
+  {
+   "t": 55,
+   "level": "INFO",
+   "msg": "scheduler tick 15"
+  },
+  {
+   "t": 58,
+   "level": "INFO",
+   "msg": "scheduler tick 24"
+  },
+  {
+   "t": 7,
+   "level": "INFO",
+   "msg": "request completed in 75ms"
+  },
+  {
+   "t": 39,
+   "level": "INFO",
+   "msg": "request completed in 88ms"
+  },
+  {
+   "t": 35,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 56,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 38,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 25,
+   "level": "INFO",
+   "msg": "scheduler tick 41"
+  },
+  {
+   "t": 9,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.67.4"
+  },
+  {
+   "t": 22,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 5,
+   "level": "INFO",
+   "msg": "request completed in 26ms"
+  },
+  {
+   "t": 56,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 48,
+   "level": "INFO",
+   "msg": "request completed in 35ms"
+  },
+  {
+   "t": 27,
+   "level": "WARN",
+   "msg": "retrying idempotent request (attempt 2)"
+  },
+  {
+   "t": 56,
+   "level": "WARN",
+   "msg": "deprecated API /v1/ping used by legacy-client"
+  },
+  {
+   "t": 7,
+   "level": "ERROR",
+   "msg": "dial tcp: lookup inventory-db.internal: no such host (NXDOMAIN)"
+  },
+  {
+   "t": 11,
+   "level": "ERROR",
+   "msg": "resolver returned NXDOMAIN for stock-api.internal"
+  },
+  {
+   "t": 7,
+   "level": "ERROR",
+   "msg": "dial tcp: lookup inventory-db.internal: no such host (NXDOMAIN)"
+  },
+  {
+   "t": 10,
+   "level": "ERROR",
+   "msg": "resolver returned NXDOMAIN for stock-api.internal"
+  },
+  {
+   "t": 15,
+   "level": "ERROR",
+   "msg": "dial tcp: lookup inventory-db.internal: no such host (NXDOMAIN)"
+  },
+  {
+   "t": 2,
+   "level": "ERROR",
+   "msg": "resolver returned NXDOMAIN for stock-api.internal"
+  }
+ ],
+ "decoy_logs": [
+  {
+   "t": 1,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 14,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 37,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 4,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 46,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 24,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 40,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 9,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 30,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  },
+  {
+   "t": 4,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  }
+ ],
+ "metrics": {
+  "error_rate": [
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.05,
+   0.09,
+   0.13,
+   0.17,
+   0.21,
+   0.25
+  ],
+  "p99_latency_ms": [
+   223.5375,
+   215.8876,
+   219.4393,
+   217.2589,
+   223.7401,
+   223.5309,
+   216.6656,
+   223.6731,
+   221.1757,
+   223.4464,
+   223.8962,
+   221.2974
+  ],
+  "memory_rss_mb": [
+   793.4209,
+   791.2912,
+   784.8553,
+   802.2679,
+   786.9259,
+   815.1322,
+   785.5724,
+   810.1218,
+   787.8836,
+   796.5913,
+   808.3602,
+   792.543
+  ],
+  "db_connections_used": [
+   39.2517,
+   39.6331,
+   40.5929,
+   40.6096,
+   39.4946,
+   39.5225,
+   40.0264,
+   39.993,
+   40.1724,
+   40.6402,
+   40.4546,
+   39.969
+  ],
+  "db_connections_max": [
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cpu_steal_pct": [
+   0.9846,
+   0.9828,
+   0.9927,
+   0.9803,
+   1.0008,
+   1.005,
+   0.99,
+   1.0046,
+   0.9955,
+   0.9887,
+   1.0149,
+   0.9915
+  ],
+  "disk_used_pct": [
+   54.1121,
+   55.5607,
+   55.4074,
+   54.0126,
+   54.2935,
+   55.2404,
+   54.4497,
+   54.71,
+   54.0293,
+   54.1697,
+   54.9102,
+   54.782
+  ],
+  "cert_days_remaining": [
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0
+  ],
+  "dns_error_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.1033,
+   0.2067,
+   0.31,
+   0.4133,
+   0.5167,
+   0.62
+  ],
+  "cache_hit_ratio": [
+   0.9487,
+   0.9391,
+   0.9547,
+   0.9418,
+   0.9551,
+   0.9626,
+   0.9629,
+   0.9317,
+   0.9516,
+   0.9413,
+   0.948,
+   0.941
+  ],
+  "upstream_429_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "config_reload_failures": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "deploys": [
+  {
+   "version": "v2.13.4",
+   "minutes_ago": 4320,
+   "author": "ci",
+   "change": "dependency bumps"
+  },
+  {
+   "version": "v2.13.3",
+   "minutes_ago": 9000,
+   "author": "ci",
+   "change": "minor fix"
+  }
+ ],
+ "tool_faults": {}
+}

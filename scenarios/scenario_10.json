@@ -1,0 +1,416 @@
+{
+ "id": 10,
+ "name": "config_error on profile-service",
+ "service": "profile-service",
+ "alert": "profile-service: new settings not taking effect",
+ "root_cause": "config_error",
+ "logs": [
+  {
+   "t": 41,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.67.4"
+  },
+  {
+   "t": 48,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:60"
+  },
+  {
+   "t": 16,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:7"
+  },
+  {
+   "t": 37,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.66.4"
+  },
+  {
+   "t": 10,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:81"
+  },
+  {
+   "t": 53,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:80"
+  },
+  {
+   "t": 6,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 45,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:71"
+  },
+  {
+   "t": 58,
+   "level": "INFO",
+   "msg": "scheduler tick 46"
+  },
+  {
+   "t": 36,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 29,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.87.4"
+  },
+  {
+   "t": 35,
+   "level": "INFO",
+   "msg": "scheduler tick 22"
+  },
+  {
+   "t": 31,
+   "level": "INFO",
+   "msg": "scheduler tick 67"
+  },
+  {
+   "t": 55,
+   "level": "INFO",
+   "msg": "request completed in 48ms"
+  },
+  {
+   "t": 39,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.54.4"
+  },
+  {
+   "t": 5,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.66.4"
+  },
+  {
+   "t": 55,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.74.4"
+  },
+  {
+   "t": 21,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 51,
+   "level": "INFO",
+   "msg": "request completed in 51ms"
+  },
+  {
+   "t": 6,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.53.4"
+  },
+  {
+   "t": 48,
+   "level": "INFO",
+   "msg": "request completed in 64ms"
+  },
+  {
+   "t": 7,
+   "level": "INFO",
+   "msg": "scheduler tick 50"
+  },
+  {
+   "t": 30,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:43"
+  },
+  {
+   "t": 19,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 49,
+   "level": "WARN",
+   "msg": "retrying idempotent request (attempt 2)"
+  },
+  {
+   "t": 50,
+   "level": "WARN",
+   "msg": "deprecated API /v1/ping used by legacy-client"
+  },
+  {
+   "t": 13,
+   "level": "ERROR",
+   "msg": "config reload failed: invalid config key 'timeout_ms' (expected duration)"
+  },
+  {
+   "t": 6,
+   "level": "WARN",
+   "msg": "falling back to previous config; invalid config key rejected"
+  },
+  {
+   "t": 17,
+   "level": "ERROR",
+   "msg": "config reload failed: invalid config key 'timeout_ms' (expected duration)"
+  },
+  {
+   "t": 9,
+   "level": "WARN",
+   "msg": "falling back to previous config; invalid config key rejected"
+  },
+  {
+   "t": 3,
+   "level": "ERROR",
+   "msg": "config reload failed: invalid config key 'timeout_ms' (expected duration)"
+  },
+  {
+   "t": 16,
+   "level": "WARN",
+   "msg": "falling back to previous config; invalid config key rejected"
+  }
+ ],
+ "decoy_logs": [
+  {
+   "t": 15,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 43,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 9,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 29,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 49,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 36,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 6,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 52,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 29,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  },
+  {
+   "t": 46,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  }
+ ],
+ "metrics": {
+  "error_rate": [
+   0.0196,
+   0.0198,
+   0.0198,
+   0.0201,
+   0.0202,
+   0.0203,
+   0.0199,
+   0.02,
+   0.0198,
+   0.02,
+   0.0196,
+   0.02
+  ],
+  "p99_latency_ms": [
+   224.3708,
+   220.6648,
+   216.886,
+   219.8025,
+   222.3808,
+   218.8415,
+   216.2722,
+   220.2424,
+   220.4585,
+   218.112,
+   221.8213,
+   216.9047
+  ],
+  "memory_rss_mb": [
+   800.1708,
+   813.1076,
+   815.953,
+   809.1931,
+   815.9663,
+   807.4927,
+   790.1053,
+   797.8671,
+   806.4077,
+   784.5371,
+   811.4564,
+   813.6402
+  ],
+  "db_connections_used": [
+   39.2449,
+   40.0661,
+   40.1669,
+   40.1102,
+   39.2843,
+   40.5903,
+   39.5654,
+   39.3007,
+   40.2881,
+   40.1103,
+   39.581,
+   40.0466
+  ],
+  "db_connections_max": [
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cpu_steal_pct": [
+   0.9882,
+   0.9856,
+   1.0181,
+   0.9836,
+   0.9992,
+   1.0186,
+   0.9816,
+   0.9872,
+   1.005,
+   1.0092,
+   1.014,
+   1.0149
+  ],
+  "disk_used_pct": [
+   53.955,
+   54.0017,
+   55.2676,
+   54.1501,
+   55.8058,
+   56.0466,
+   55.7284,
+   55.871,
+   54.0105,
+   55.9696,
+   54.9678,
+   54.8719
+  ],
+  "cert_days_remaining": [
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0
+  ],
+  "dns_error_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cache_hit_ratio": [
+   0.9656,
+   0.9324,
+   0.9587,
+   0.9351,
+   0.931,
+   0.9566,
+   0.9343,
+   0.9675,
+   0.9516,
+   0.9552,
+   0.9317,
+   0.9481
+  ],
+  "upstream_429_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "config_reload_failures": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1.0,
+   2.0,
+   3.0
+  ]
+ },
+ "deploys": [
+  {
+   "version": "cfg-2026-77",
+   "minutes_ago": 12,
+   "author": "ops-b",
+   "change": "config push"
+  },
+  {
+   "version": "v2.13.4",
+   "minutes_ago": 4320,
+   "author": "ci",
+   "change": "dependency bumps"
+  },
+  {
+   "version": "v2.13.3",
+   "minutes_ago": 9000,
+   "author": "ci",
+   "change": "minor fix"
+  }
+ ],
+ "tool_faults": {
+  "query_logs": {
+   "mode": "noise"
+  }
+ }
+}

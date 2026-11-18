@@ -1,0 +1,406 @@
+{
+ "id": 4,
+ "name": "expired_cert on payments-gateway",
+ "service": "payments-gateway",
+ "alert": "payments-gateway: TLS handshake failures from clients",
+ "root_cause": "expired_cert",
+ "logs": [
+  {
+   "t": 37,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.46.4"
+  },
+  {
+   "t": 55,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:40"
+  },
+  {
+   "t": 13,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 44,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.46.4"
+  },
+  {
+   "t": 39,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 27,
+   "level": "INFO",
+   "msg": "request completed in 5ms"
+  },
+  {
+   "t": 53,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.35.4"
+  },
+  {
+   "t": 49,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.89.4"
+  },
+  {
+   "t": 38,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 48,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 14,
+   "level": "INFO",
+   "msg": "request completed in 8ms"
+  },
+  {
+   "t": 33,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:85"
+  },
+  {
+   "t": 36,
+   "level": "INFO",
+   "msg": "request completed in 43ms"
+  },
+  {
+   "t": 47,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 17,
+   "level": "INFO",
+   "msg": "scheduler tick 35"
+  },
+  {
+   "t": 16,
+   "level": "INFO",
+   "msg": "scheduler tick 39"
+  },
+  {
+   "t": 59,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 35,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:37"
+  },
+  {
+   "t": 57,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:85"
+  },
+  {
+   "t": 22,
+   "level": "INFO",
+   "msg": "request completed in 6ms"
+  },
+  {
+   "t": 21,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:16"
+  },
+  {
+   "t": 57,
+   "level": "INFO",
+   "msg": "scheduler tick 14"
+  },
+  {
+   "t": 11,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:71"
+  },
+  {
+   "t": 33,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:7"
+  },
+  {
+   "t": 54,
+   "level": "WARN",
+   "msg": "retrying idempotent request (attempt 2)"
+  },
+  {
+   "t": 39,
+   "level": "WARN",
+   "msg": "deprecated API /v1/ping used by legacy-client"
+  },
+  {
+   "t": 15,
+   "level": "ERROR",
+   "msg": "x509: certificate has expired or is not yet valid (payments-gateway.internal)"
+  },
+  {
+   "t": 18,
+   "level": "ERROR",
+   "msg": "TLS handshake failed: certificate has expired"
+  },
+  {
+   "t": 4,
+   "level": "ERROR",
+   "msg": "x509: certificate has expired or is not yet valid (payments-gateway.internal)"
+  },
+  {
+   "t": 16,
+   "level": "ERROR",
+   "msg": "TLS handshake failed: certificate has expired"
+  },
+  {
+   "t": 8,
+   "level": "ERROR",
+   "msg": "x509: certificate has expired or is not yet valid (payments-gateway.internal)"
+  },
+  {
+   "t": 9,
+   "level": "ERROR",
+   "msg": "TLS handshake failed: certificate has expired"
+  }
+ ],
+ "decoy_logs": [
+  {
+   "t": 36,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 40,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 43,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 16,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 39,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 27,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 5,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 37,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 36,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  },
+  {
+   "t": 40,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  }
+ ],
+ "metrics": {
+  "error_rate": [
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.0667,
+   0.1233,
+   0.18,
+   0.2367,
+   0.2933,
+   0.35
+  ],
+  "p99_latency_ms": [
+   222.7201,
+   223.0377,
+   218.8523,
+   220.0494,
+   221.9414,
+   216.8601,
+   215.8349,
+   216.9501,
+   222.9598,
+   218.4568,
+   218.2657,
+   216.6371
+  ],
+  "memory_rss_mb": [
+   787.8703,
+   814.9784,
+   785.6165,
+   815.4787,
+   801.6727,
+   791.918,
+   784.5099,
+   812.2128,
+   796.4704,
+   814.3488,
+   785.8724,
+   809.5198
+  ],
+  "db_connections_used": [
+   40.2575,
+   40.4941,
+   39.9857,
+   40.3494,
+   39.9042,
+   39.5762,
+   39.4109,
+   39.9558,
+   40.3784,
+   39.2328,
+   39.446,
+   40.6698
+  ],
+  "db_connections_max": [
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cpu_steal_pct": [
+   1.0013,
+   1.0022,
+   1.0043,
+   0.9859,
+   0.9976,
+   0.9956,
+   1.0088,
+   0.9996,
+   1.0062,
+   1.0168,
+   0.9995,
+   1.0119
+  ],
+  "disk_used_pct": [
+   55.1406,
+   56.0142,
+   54.9482,
+   54.4473,
+   55.9878,
+   55.5329,
+   54.2154,
+   54.6893,
+   54.9854,
+   54.0186,
+   54.38,
+   54.1428
+  ],
+  "cert_days_remaining": [
+   5,
+   4,
+   3,
+   2,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "dns_error_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cache_hit_ratio": [
+   0.9352,
+   0.9342,
+   0.9635,
+   0.9628,
+   0.9499,
+   0.9439,
+   0.9646,
+   0.9604,
+   0.9476,
+   0.9448,
+   0.969,
+   0.9314
+  ],
+  "upstream_429_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "config_reload_failures": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "deploys": [
+  {
+   "version": "v2.13.4",
+   "minutes_ago": 4320,
+   "author": "ci",
+   "change": "dependency bumps"
+  },
+  {
+   "version": "v2.13.3",
+   "minutes_ago": 9000,
+   "author": "ci",
+   "change": "minor fix"
+  }
+ ],
+ "tool_faults": {}
+}

@@ -1,0 +1,410 @@
+{
+ "id": 9,
+ "name": "upstream_rate_limit on billing-service",
+ "service": "billing-service",
+ "alert": "billing-service: payment provider calls failing",
+ "root_cause": "upstream_rate_limit",
+ "logs": [
+  {
+   "t": 43,
+   "level": "INFO",
+   "msg": "scheduler tick 68"
+  },
+  {
+   "t": 46,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 55,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 43,
+   "level": "INFO",
+   "msg": "request completed in 76ms"
+  },
+  {
+   "t": 45,
+   "level": "INFO",
+   "msg": "scheduler tick 31"
+  },
+  {
+   "t": 33,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.83.4"
+  },
+  {
+   "t": 59,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.9.4"
+  },
+  {
+   "t": 56,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 55,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 15,
+   "level": "INFO",
+   "msg": "request completed in 32ms"
+  },
+  {
+   "t": 54,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 9,
+   "level": "INFO",
+   "msg": "connection accepted from 10.0.72.4"
+  },
+  {
+   "t": 58,
+   "level": "INFO",
+   "msg": "request completed in 78ms"
+  },
+  {
+   "t": 54,
+   "level": "INFO",
+   "msg": "request completed in 33ms"
+  },
+  {
+   "t": 43,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:85"
+  },
+  {
+   "t": 6,
+   "level": "INFO",
+   "msg": "request completed in 69ms"
+  },
+  {
+   "t": 5,
+   "level": "INFO",
+   "msg": "scheduler tick 53"
+  },
+  {
+   "t": 5,
+   "level": "INFO",
+   "msg": "request completed in 81ms"
+  },
+  {
+   "t": 52,
+   "level": "DEBUG",
+   "msg": "cache lookup key=user:62"
+  },
+  {
+   "t": 1,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 22,
+   "level": "DEBUG",
+   "msg": "metrics flush ok"
+  },
+  {
+   "t": 41,
+   "level": "INFO",
+   "msg": "request completed in 85ms"
+  },
+  {
+   "t": 2,
+   "level": "INFO",
+   "msg": "request completed in 19ms"
+  },
+  {
+   "t": 45,
+   "level": "INFO",
+   "msg": "healthcheck ok"
+  },
+  {
+   "t": 52,
+   "level": "WARN",
+   "msg": "retrying idempotent request (attempt 2)"
+  },
+  {
+   "t": 38,
+   "level": "WARN",
+   "msg": "deprecated API /v1/ping used by legacy-client"
+  },
+  {
+   "t": 1,
+   "level": "ERROR",
+   "msg": "upstream payments-api returned 429 Too Many Requests"
+  },
+  {
+   "t": 2,
+   "level": "WARN",
+   "msg": "429 Too Many Requests from payments-api, Retry-After=30"
+  },
+  {
+   "t": 4,
+   "level": "ERROR",
+   "msg": "upstream payments-api returned 429 Too Many Requests"
+  },
+  {
+   "t": 6,
+   "level": "WARN",
+   "msg": "429 Too Many Requests from payments-api, Retry-After=30"
+  },
+  {
+   "t": 10,
+   "level": "ERROR",
+   "msg": "upstream payments-api returned 429 Too Many Requests"
+  },
+  {
+   "t": 20,
+   "level": "WARN",
+   "msg": "429 Too Many Requests from payments-api, Retry-After=30"
+  }
+ ],
+ "decoy_logs": [
+  {
+   "t": 32,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 5,
+   "level": "ERROR",
+   "msg": "healthcheck probe timeout (single occurrence, auto-recovered)"
+  },
+  {
+   "t": 3,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 13,
+   "level": "WARN",
+   "msg": "GC pause 14ms exceeded soft threshold"
+  },
+  {
+   "t": 28,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 29,
+   "level": "ERROR",
+   "msg": "transient gRPC CANCELLED on client disconnect"
+  },
+  {
+   "t": 20,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 17,
+   "level": "ERROR",
+   "msg": "failed to emit trace span: exporter queue full"
+  },
+  {
+   "t": 23,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  },
+  {
+   "t": 44,
+   "level": "WARN",
+   "msg": "slow healthcheck probe 480ms"
+  }
+ ],
+ "metrics": {
+  "error_rate": [
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.01,
+   0.0257,
+   0.0414,
+   0.0571,
+   0.0729,
+   0.0886,
+   0.1043,
+   0.12
+  ],
+  "p99_latency_ms": [
+   220.7369,
+   221.5289,
+   217.0151,
+   222.1692,
+   220.6219,
+   219.6814,
+   220.0942,
+   216.7824,
+   220.8411,
+   224.1413,
+   216.8146,
+   221.6852
+  ],
+  "memory_rss_mb": [
+   798.6275,
+   808.867,
+   797.7245,
+   809.1952,
+   798.5146,
+   793.5981,
+   792.5715,
+   797.2419,
+   812.6584,
+   794.8478,
+   798.2055,
+   792.5221
+  ],
+  "db_connections_used": [
+   39.5059,
+   40.5475,
+   39.407,
+   40.0732,
+   40.3024,
+   39.7013,
+   40.4502,
+   40.3963,
+   40.3109,
+   39.2165,
+   40.413,
+   40.5385
+  ],
+  "db_connections_max": [
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "cpu_steal_pct": [
+   1.0159,
+   0.997,
+   0.9919,
+   0.9876,
+   1.009,
+   1.0141,
+   0.9841,
+   1.001,
+   0.9948,
+   0.9857,
+   1.0165,
+   1.0017
+  ],
+  "disk_used_pct": [
+   54.8249,
+   55.696,
+   55.7896,
+   55.5712,
+   55.8475,
+   54.2081,
+   55.4737,
+   54.7874,
+   54.6142,
+   55.2431,
+   55.9761,
+   54.3959
+  ],
+  "cert_days_remaining": [
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0,
+   30.0
+  ],
+  "dns_error_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cache_hit_ratio": [
+   0.9397,
+   0.9432,
+   0.967,
+   0.9335,
+   0.9512,
+   0.9333,
+   0.9332,
+   0.9331,
+   0.9341,
+   0.9483,
+   0.9515,
+   0.9676
+  ],
+  "upstream_429_rate": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0643,
+   0.1286,
+   0.1929,
+   0.2571,
+   0.3214,
+   0.3857,
+   0.45
+  ],
+  "config_reload_failures": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "deploys": [
+  {
+   "version": "v2.13.4",
+   "minutes_ago": 4320,
+   "author": "ci",
+   "change": "dependency bumps"
+  },
+  {
+   "version": "v2.13.3",
+   "minutes_ago": 9000,
+   "author": "ci",
+   "change": "minor fix"
+  }
+ ],
+ "tool_faults": {
+  "query_logs": {
+   "mode": "down"
+  }
+ }
+}
