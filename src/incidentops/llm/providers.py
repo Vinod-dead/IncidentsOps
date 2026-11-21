@@ -40,10 +40,17 @@ class OpenAILLM:
         self.model = os.getenv("INCIDENTOPS_MODEL", "gpt-4o-mini")
 
     def complete(self, system: str, prompt: str) -> LLMResult:
+        extra = {}
+        if os.getenv("OPENAI_BASE_URL", "").startswith("https://integrate.api.nvidia.com"):
+            extra["extra_body"] = {
+                "chat_template_kwargs": {"enable_thinking": False}
+            }
+
         r = self.client.chat.completions.create(
             model=self.model,
             response_format={"type": "json_object"},
             messages=[{"role": "system", "content": system}, {"role": "user", "content": prompt}],
+            **extra,
         )
         u = r.usage
         return LLMResult(

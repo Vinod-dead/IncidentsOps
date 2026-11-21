@@ -126,6 +126,10 @@ scenarios/ runbooks/ evals/ tests/ docs/ scripts/
 
 See `docs/architecture.md`, `docs/research.md` (papers) and `docs/INTERVIEW.md` (how to present this).
 
+
 ## License
 
-MIT, see [LICENSE](LICENSE). Replace `<Your Name>` in LICENSE with your name.
+MIT License. See [LICENSE](LICENSE).
+
+Copyright (c) 2026 VINODREDDY
+

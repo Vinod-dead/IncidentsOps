@@ -84,7 +84,7 @@ def _instrument(
             if not safe:
                 raise
             err = {"node": name, "kind": "exception", "message": f"{type(e).__name__}: {e}"}
-            deps.trace.emit(state["incident_id"], name, "error", **err)
+            deps.trace.emit(state["incident_id"], name, "error", message=err["message"])
             upd = {"errors": state["errors"] + [err]}
             if name in ("log_analyst", "metrics_analyst", "runbook_retriever"):
                 upd["done_agents"] = state["done_agents"] + [
@@ -125,3 +125,5 @@ def build_graph(deps: Deps, checkpointer: BaseCheckpointSaver[Any]) -> Any:
     g.add_edge("finalize", END)
     g.add_edge("escalate", END)
     return g.compile(checkpointer=checkpointer)
+
+

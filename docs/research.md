@@ -1,14 +1,19 @@
+
 # Papers behind the design
 
-Verify arXiv IDs and details before citing them publicly.
+The following papers and engineering resources informed the
+design. The implementation connections below describe how
+their ideas relate to this project, not claims of reproducing
+the original research.
 
 | Paper | Used for |
 |---|---|
-| ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al., 2022, arXiv 2210.03629) | Thought/Action/Observation loop in every analyst |
-| Reflexion (Shinn et al., 2023, arXiv 2303.11366) | Critic feedback that drives plan revision |
-| Self-Refine (Madaan et al., 2023, arXiv 2303.17651) | Bounded iterate-and-revise loop (max 2) |
-| AutoGen (Wu et al., 2023, arXiv 2308.08155) | Multi-agent conversation / delegation patterns |
-| MetaGPT (Hong et al., 2023, arXiv 2308.00352) | Role-specialised agents with structured hand-offs |
-| Why Do Multi-Agent LLM Systems Fail? (Cemri et al., 2025, arXiv 2503.13657) | Motivation for the guards, budgets, and failure handling |
-| Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (Zheng et al., 2023, arXiv 2306.05685) | Judge methodology and its biases (so the judge is secondary to deterministic checks) |
-| Anthropic, "Building Effective Agents" (blog) | Orchestrator-workers pattern, prefer simple deterministic workflows |
+| [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) (Yao et al., 2022) | Thought/action/observation loop in analyst agents |
+| [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) (Shinn et al., 2023) | Inspiration for feedback-driven plan revision |
+| [Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/abs/2303.17651) (Madaan et al., 2023) | Inspiration for bounded iterative refinement |
+| [AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation](https://arxiv.org/abs/2308.08155) (Wu et al., 2023) | Multi-agent conversation and delegation patterns |
+| [MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework](https://arxiv.org/abs/2308.00352) (Hong et al., 2023) | Role-specialized agents and structured hand-offs |
+| [Why Do Multi-Agent LLM Systems Fail?](https://arxiv.org/abs/2503.13657) (Cemri et al., 2025) | Motivation for guards, budgets, and failure handling |
+| [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](https://arxiv.org/abs/2306.05685) (Zheng et al., 2023) | Judge methodology and known biases; supports keeping deterministic checks primary |
+| [Building effective agents](https://www.anthropic.com/research/building-effective-agents) (Anthropic, 2024) | Orchestrator-workers pattern and preference for simple, composable workflows |
+
